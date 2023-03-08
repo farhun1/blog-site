@@ -1,0 +1,135 @@
+baseURL: ""
+title: Farhun's Den
+paginate: 6
+theme: PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+# googleAnalytics: UA-123-45
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: Farhun's Den
+  description: "Learn, Explore & Teach"
+  keywords: [Blog, Portfolio, PaperMod]
+  author: Farhun
+  # author: ["Me", "You"] # multiple authors
+  images: ["<link or path of image for opengraph, twitter-cards>"]
+  DateFormat: "January 2, 2006"
+  defaultTheme: dark # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: false
+  favicon: true
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "/favicon/favicon.ico"
+    favicon16x16: "/favicon/favicon-16x16.png"
+    favicon32x32: "/favicon/favicon-32x32.png"
+    apple_touch_icon: "/favicon/apple-icon-120x120.png"
+    safari_pinned_tab: "/favicon/apple-icon-120x120.png"
+
+  label:
+    text: "Farhun's Den"
+    icon: /logo.png
+    iconHeight: 35
+
+  # profile-mode
+  profileMode:
+    enabled: true # needs to be explicitly set
+    title: Farhun Monsur
+    subtitle: "As-salamu-alaykum \U0001F54A, I'm an Electrical and Electronic Engineer with a passion for technology. With my knowledge of power generation and electronics, I've always been fascinated by the way things work and how they can be improved. As a tech enthusiast, I love exploring new technologies and seeing how they can be applied to different areas of our lives. \U0001F528 \U0001F9ED"
+    imageUrl: "images/whoami/avatar.jpg"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: Farhun
+    buttons:
+      - name: Blog
+        url: blog
+      - name: Projects
+        url: projects
+
+
+  # home-info mode
+  homeInfoParams:
+    Title: "Assalamualaikum \U0001F44B"
+    Content: 
+
+  socialIcons:
+    - name: linkedin
+      url: "https://linkedin.com/in/farhun-monsur"
+    - name: github
+      url: "https://github.com/farhun1"
+
+  cover:
+    hidden: false # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+  editPost:
+    URL: "https://github.com/farhun1/website/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
+
+taxonomies:
+  category: categories
+
+menu:
+  main:
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 10  
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
+    highlight:
+        noClasses: false
+        # anchorLineNos: true
+        # codeFences: true
+        # guessSyntax: true
+        # lineNos: true
+        # style: monokai
